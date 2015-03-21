@@ -1,0 +1,29 @@
+{% extends 'pullups/base.html' %}
+
+{% block content %}
+
+<table border = 1>
+    <tr>
+        <td>1st</td>
+        <td>2nd</td>
+        <td>3rd</td>
+        <td>Avg</td>
+        <td>Total</td>
+        <td>Time</td>
+        <td>Date</td>
+        <td>Notes</td>
+    </tr>
+{% for item in history %}
+    <tr>
+        <td> {{ item.first_set }} </td>
+        <td> {{ item.second_set }} </td>
+        <td> {{ item.third_set }} </td>
+        <td> {{ item.average }} </td>
+        <td> {{ item.total }} </td>
+        <td> {{ item.time_of_day }} </td>
+        <td> {{ item.date }} </td>
+        <td> {{ item.notes }} </td>
+     </tr>
+{% endfor %}
+</table>
+{% endblock %}

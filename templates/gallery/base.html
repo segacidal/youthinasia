@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Image Galleries</title>
+</head>
+<body>
+<h2><a href="{% url 'gallery:home' %}">Home</a></h2>
+
+<div id="options">
+    <ul>
+        <a href="">Upload an image</a> |
+        <a href="{% url 'gallery:addgallery' %}">Create New Gallery</a> |
+        <a href="{% url 'gallery:home' %}">View Galleries</a>
+    </ul>
+</div>
+
+<div id="content">
+{% block content %} {% endblock %}
+</div>
+
+</body>
+</html>

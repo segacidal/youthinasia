@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> {% block title %} default title {% endblock %} </title>
+{% block extrahead %} <link rel="stylesheet" type="text/css" href="/static/css/basic.css"> {% endblock %}
+</head>
+
+<body>
+<div id="container">
+
+<div id="header"><a href="/hello/">
+    <h1>django projects</h1>
+    doing stuff
+    </a>
+</div>
+
+<div id="content">
+{% block content %} {% endblock %}
+</div>
+
+</div>
+</body>
+
+</html>

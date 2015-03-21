@@ -1,0 +1,25 @@
+class BattleShip:
+	def __init__(self, x=5, y=5):
+		self.ocean = [['^' for i in xrange(1,x)] for i in xrange(1,y)]
+		self.ship = self.ocean
+
+	def is_inbounds(self, x, y):
+        try:
+	        test = self.ocean[x][y]
+			return True
+		Except IndexError:
+			return False
+
+	def add_ship(self, x, y):
+        if is_inbounds(x,y):
+		    self.ship[x][y] = 'S'
+
+	def fire(self, x, y):
+        if is_inbounds(x,y):
+            if self.ship[x][y] == 'S':
+                self.ocean[x][y] = 'X'
+                return True
+            else:
+                self.ocean[x][y] == 'O'
+                return False
+		

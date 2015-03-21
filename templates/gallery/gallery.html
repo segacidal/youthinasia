@@ -1,0 +1,21 @@
+{% extends "gallery/home.html" %}
+{% load staticfiles %}
+
+{% block content %}
+Yo here goes the pics!
+
+        {{ name }}
+
+{%  if warning %}
+    {{ warning }}
+{% endif %}
+
+{% for i in images %}
+      <li>
+          <img src = "{% static i.thumb %}"/>
+          <a href = "{% static i %}">{{ i.notes }}</a>
+
+      </li>
+{% endfor %}
+
+{% endblock %}

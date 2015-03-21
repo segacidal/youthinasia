@@ -1,0 +1,15 @@
+{% extends 'gymlog/base.html' %}
+
+{% block content %}
+
+<table>
+    {% for day in days %}
+    <tr>
+        <td>
+            <a href="{% url 'gymlog:day' day.slug %}">{{ day.name }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

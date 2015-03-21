@@ -1,0 +1,15 @@
+{% extends 'gymlog/base.html' %}
+
+{% block content %}
+
+<table>
+    {% for exercise in exercises %}
+    <tr>
+        <td>
+            <a href="{% url 'gymlog:exercise' exercise.slug %}"> {{ exercise.name }} </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

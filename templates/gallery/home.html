@@ -1,0 +1,12 @@
+{% extends "gallery/base.html" %}
+
+
+{% block content %}
+
+{% for g in galleries %}
+      <li>
+          <a href = "{{ g.slug }}">{{ g }}</a>
+      </li>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> {% block title %} gym log {% endblock %} </title>
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+    <h1>gym log</h1>
+</div>
+
+<div id="menu">
+    <a href="{% url 'gymlog:home' %}">home</a> |
+    <a href="{% url 'gymlog:dev' %}">dev stuff</a> |
+</div>
+
+<div id="content">
+{% block content %} {% endblock %}
+</div>
+
+</div>
+</body>
+
+</html>

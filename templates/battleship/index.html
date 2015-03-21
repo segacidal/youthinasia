@@ -1,0 +1,31 @@
+{% extends 'battleship/base.html' %}
+
+
+{% block content %}
+
+<table>
+{% for x in ocean %}
+	<tr>
+	{% for y in x %}
+		<td> {{ y }} </td>
+ 	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+
+<hr/>
+
+{% if message %}
+	{{ message }}
+{% endif %}
+
+<form action="" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+<input type="submit" value="Fire!"/>
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> {% block title %} pullup tracker {% endblock %} </title>
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+    <h1>pullups tracker</h1>
+</div>
+
+<div id="menu">
+    <a href="{% url 'pullups:home' %}">home</a> |
+    <a href="{% url 'pullups:view_history' %}">view history</a> |
+    <a href="{% url 'pullups:graph' %}">graph it</a> |
+    <a href="{% url 'pullups:to_do' %}">to do</a> |
+    <form action="#" method="get">
+    <input type="submit" value="Delete" name="delete_btn">
+    </form>
+</form>
+</div>
+
+<div id="content">
+{% block content %} {% endblock %}
+</div>
+
+</div>
+</body>
+
+</html>

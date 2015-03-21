@@ -1,0 +1,29 @@
+{% extends 'gymlog/base.html' %}
+
+{% block content %}
+
+<h2>{{ exercise.name }}</h2>
+
+<div id="form">
+    <form action="" method="post">
+        <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+<div id="history">
+    <table>
+        {% for item in history %}
+        <tr>
+            <td>{{ item.weight }}</td>
+            <td>{{ item.sets }}</td>
+            <td>{{ item.reps }}</td>
+            <td>{{ item.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
